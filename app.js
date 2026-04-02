@@ -60,7 +60,7 @@
   let state = hydrateState();
   let toastTimer = null;
   let pendingScrollId = null;
-  
+
   root.addEventListener("click", handleClick);
   root.addEventListener("submit", handleSubmit);
   root.addEventListener("input", handleInput);
@@ -1906,4 +1906,9 @@
     o2pulse: `<p><em>American College of Sports Medicine. (2025). ACSM's guidelines for exercise testing and prescription</em> (12th ed.). Wolters Kluwer.</p>`,
     fick: `<p><em>American College of Sports Medicine. (2025). ACSM's guidelines for exercise testing and prescription</em> (12th ed.). Wolters Kluwer.</p>`
   };
+
+  renderApp();
 })();
+
+
+
