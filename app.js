@@ -60,13 +60,11 @@
   let state = hydrateState();
   let toastTimer = null;
   let pendingScrollId = null;
-
+  
   root.addEventListener("click", handleClick);
   root.addEventListener("submit", handleSubmit);
   root.addEventListener("input", handleInput);
   fileInput.addEventListener("change", handleFileImport);
-
-  renderApp();
 
   function hydrateState() {
     try {
