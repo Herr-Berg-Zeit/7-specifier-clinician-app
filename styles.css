@@ -546,9 +546,9 @@ textarea {
 }
 
 .qr-reference-code {
-  width: 154px;
-  height: 154px;
-  flex: 0 0 42px;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,8 +558,8 @@ textarea {
 
 .qr-reference-code a {
   display: block;
-  width: 54px;
-  height: 54px;
+  width: 56px;
+  height: 56px;
   overflow: hidden;
 }
 
@@ -574,7 +574,7 @@ textarea {
   border-radius: 4px;
   background: white;
   border: 1px solid var(--line);
-  padding: 1px;
+  padding: 2px;
   box-shadow: none;
 }
 
