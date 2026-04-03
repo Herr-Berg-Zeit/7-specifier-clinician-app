@@ -130,7 +130,9 @@
       <header class="topbar">
         <div class="topbar-inner">
           <div class="brand">
-            <div class="brand-badge">MET</div>
+            <div class="brand-badge">
+              <img src="assets/radar-logo-sunset.png" alt="7 Specifier Engine logo" class="brand-logo" />
+            </div>
             <div class="brand-copy">
               <h1>7 Specifier Engine</h1>
               <p>Exercise-dose reference, planning, and calculation toolkit.</p>
