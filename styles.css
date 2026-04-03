@@ -46,8 +46,18 @@ a { color: inherit; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 .hidden { display: none !important; }
+
+
 .app-shell {
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.zoom-shell {
+  transform: scale(var(--ui-scale, 1));
+  transform-origin: top center;
+  width: var(--ui-inverse, 100%);
+  margin: 0 auto;
 }
 .topbar {
   position: sticky;
@@ -114,6 +124,39 @@ button { cursor: pointer; }
   flex-wrap: wrap;
   justify-content: flex-end;
 }
+
+.zoom-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.zoom-btn {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.92);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 8px 10px;
+  min-width: 38px;
+  font-weight: 700;
+}
+
+.zoom-btn:hover {
+  background: var(--surface-soft);
+}
+
+.zoom-reset {
+  padding-inline: 12px;
+}
+
+.zoom-readout {
+  min-width: 52px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--muted);
+}
+
 .meta-pill {
   padding: 9px 14px;
   border-radius: 999px;
@@ -831,7 +874,12 @@ input[type="range"] {
     width: 100%;
     justify-content: flex-start;
   }
-
+  
+  .zoom-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
   .brand {
     align-items: flex-start;
   }
