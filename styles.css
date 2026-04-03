@@ -531,7 +531,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
@@ -546,14 +546,31 @@ textarea {
 }
 
 .qr-reference-code {
-  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.qr-code-image {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
+.qr-reference-code a {
   display: block;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+}
+
+.qr-reference-code img,
+.qr-code-image {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain;
   border-radius: 4px;
   background: white;
   border: 1px solid var(--line);
