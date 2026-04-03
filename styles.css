@@ -546,9 +546,9 @@ textarea {
 }
 
 .qr-reference-code {
-  width: 56px;
-  height: 56px;
-  flex: 0 0 56px;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,18 +558,18 @@ textarea {
 
 .qr-reference-code a {
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   overflow: hidden;
 }
 
 .qr-reference-code img,
 .qr-code-image {
   display: block;
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
+  width: 58px !important;
+  height: 58px !important;
+  max-width: 58px !important;
+  max-height: 58px !important;
   object-fit: contain;
   border-radius: 4px;
   background: white;
