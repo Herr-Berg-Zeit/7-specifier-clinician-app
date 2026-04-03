@@ -550,14 +550,14 @@ textarea {
 }
 
 .qr-code-image {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
+  border-radius: 4px;
   background: white;
   border: 1px solid var(--line);
-  padding: 2px;
+  padding: 1px;
   box-shadow: none;
 }
 
