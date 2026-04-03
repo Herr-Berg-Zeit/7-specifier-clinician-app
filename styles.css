@@ -57,7 +57,7 @@ button { cursor: pointer; }
   width: 100%;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .zoom-shell {
