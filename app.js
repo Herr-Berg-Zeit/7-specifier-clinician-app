@@ -106,15 +106,16 @@
   }
 
   function renderApp() {
-    const inverseScale = 100 / (state.uiScale || 1);
     root.innerHTML = `
       <div class="app-shell">
-        <div class="zoom-shell" style="--ui-scale:${state.uiScale}; --ui-inverse:${inverseScale}%;">
-          ${renderTopbar()}
-          <main class="page">
-            ${renderActiveTab()}
-          </main>
-          <div class="toast-stack">${renderToast()}</div>
+        <div class="zoom-outer">
+          <div class="zoom-shell" style="--ui-scale:${state.uiScale || 1};">
+            ${renderTopbar()}
+            <main class="page">
+              ${renderActiveTab()}
+            </main>
+            <div class="toast-stack">${renderToast()}</div>
+          </div>
         </div>
       </div>
     `;
