@@ -53,11 +53,17 @@ button { cursor: pointer; }
   overflow-x: hidden;
 }
 
+.zoom-outer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
 .zoom-shell {
+  width: 100%;
   transform: scale(var(--ui-scale, 1));
   transform-origin: top center;
-  width: var(--ui-inverse, 100%);
-  margin: 0 auto;
 }
 .topbar {
   position: sticky;
