@@ -106,11 +106,14 @@
   }
 
   function renderApp() {
+    const scale = state.uiScale || 1;
+    const zoomWidth = scale > 1 ? (100 / scale) : 100;
+  
     root.innerHTML = `
       <div class="app-shell">
+        ${renderTopbar()}
         <div class="zoom-outer">
-          <div class="zoom-shell" style="--ui-scale:${state.uiScale || 1};">
-            ${renderTopbar()}
+          <div class="zoom-shell" style="--ui-scale:${scale}; --ui-width:${zoomWidth}%;">
             <main class="page">
               ${renderActiveTab()}
             </main>
