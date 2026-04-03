@@ -11,6 +11,7 @@
 
   const DEFAULT_STATE = {
     activeTab: "home",
+    uiScale: 1,
     usingCustomDb: false,
     db: Array.isArray(window.BUNDLED_DB) ? clone(window.BUNDLED_DB) : [],
     libraryFilters: {
@@ -89,6 +90,7 @@
   function persistState() {
     const safeState = {
       activeTab: state.activeTab,
+      uiScale: state.uiScale,
       libraryFilters: state.libraryFilters,
       doseLookupQuery: state.doseLookupQuery,
       selectedActivityCode: state.selectedActivityCode,
@@ -104,13 +106,16 @@
   }
 
   function renderApp() {
+    const inverseScale = 100 / (state.uiScale || 1);
     root.innerHTML = `
       <div class="app-shell">
-        ${renderTopbar()}
-        <main class="page">
-          ${renderActiveTab()}
-        </main>
-        <div class="toast-stack">${renderToast()}</div>
+        <div class="zoom-shell" style="--ui-scale:${state.uiScale}; --ui-inverse:${inverseScale}%;">
+          ${renderTopbar()}
+          <main class="page">
+            ${renderActiveTab()}
+          </main>
+          <div class="toast-stack">${renderToast()}</div>
+        </div>
       </div>
     `;
     afterRender();
@@ -139,8 +144,13 @@
             </div>
           </div>
           <div class="topbar-meta">
+            <div class="zoom-controls" aria-label="Page zoom controls">
+              <button class="zoom-btn" data-action="zoom-out" aria-label="Zoom out">−</button>
+              <span class="zoom-readout">${round((state.uiScale || 1) * 100, 0)}%</span>
+              <button class="zoom-btn" data-action="zoom-in" aria-label="Zoom in">+</button>
+              <button class="zoom-btn zoom-reset" data-action="zoom-reset">Reset</button>
+            </div>
           </div>
-        </div>
         <div class="topbar-inner tabs-row">
           <nav class="tabs" aria-label="Primary navigation">
             ${tabs.map(([key, icon, label]) => `
@@ -1039,6 +1049,21 @@
     const action = button.dataset.action;
     if (action === "switch-tab") {
       state.activeTab = button.dataset.tab;
+      renderApp();
+      return;
+    }
+    if (action === "zoom-in") {
+      state.uiScale = clamp(round((state.uiScale || 1) + 0.1, 2), 0.8, 1.5);
+      renderApp();
+      return;
+    }
+    if (action === "zoom-out") {
+      state.uiScale = clamp(round((state.uiScale || 1) - 0.1, 2), 0.8, 1.5);
+      renderApp();
+      return;
+    }
+    if (action === "zoom-reset") {
+      state.uiScale = 1;
       renderApp();
       return;
     }
