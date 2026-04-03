@@ -546,8 +546,8 @@ textarea {
 }
 
 .qr-reference-code {
-  width: 42px;
-  height: 42px;
+  width: 154px;
+  height: 154px;
   flex: 0 0 42px;
   display: flex;
   align-items: center;
