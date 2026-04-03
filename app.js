@@ -992,6 +992,8 @@
             </div>
           </section>
 
+
+
           <section class="section-card">
             <div class="card-head">
               <div>
@@ -1004,9 +1006,31 @@
               <span class="small muted">The seven-specifier framework is strongest when the source of each estimate is clear. Separating direct measurement, compendium-based estimates, and lower-resource proxies improves interpretability and makes future replication much easier.</span>
             </div>
           </section>
-        </div>
-      </section>
-    `;
+          
+          <section class="section-card qr-reference-card">
+            <div class="card-head">
+              <div>
+                <h2>More references</h2>
+                <p>Scan the QR code for additional references related to the poster and supporting material.</p>
+              </div>
+            </div>
+            <div class="qr-reference-row">
+              <div class="qr-reference-copy">
+                <strong>For more sources</strong>
+                <p>See my references for the poster <em>Prescribing Exercise in Behavioral Health: A Framework Toward an Evidence-Based Dose</em> for the SBM 2026 conference.</p>
+                <p class="small muted">You can scan the QR code or open the linked resource directly if you are viewing this page on a computer.</p>
+              </div>
+              <div class="qr-reference-code">
+                <a href="https://docs.google.com/spreadsheets/d/1nmlNWUk10V9Ux94SZo3z-JYVCOlSCQ84oRZasrKFeT8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/sbm-2026-refs-qr.png" alt="QR code linking to additional SBM 2026 poster references" class="qr-code-image" />
+                </a>
+              </div>
+            </div>
+          </section>
+          
+                  </div>
+                </section>
+              `;
   }
 
   function handleClick(event) {
