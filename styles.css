@@ -83,12 +83,11 @@ button { cursor: pointer; }
   background: transparent;
   box-shadow: none;
   overflow: hidden;
-  padding: 6px;
 }
 
 .brand-logo {
-  width: 70%;
-  height: 70%;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   display: block;
 }
