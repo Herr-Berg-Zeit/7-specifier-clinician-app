@@ -78,20 +78,25 @@ button { cursor: pointer; }
   width: 52px;
   height: 52px;
   border-radius: 16px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   box-shadow: none;
   overflow: hidden;
+  flex: 0 0 52px;
+  padding: 0;
 }
-
+.brand-badge img,
 .brand-logo {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
   display: block;
+  width: 26px !important;
+  height: 26px !important;
+  max-width: 26px;
+  max-height: 26px;
+  object-fit: contain;
+  flex: 0 0 26px;
 }
-
 .brand-copy h1 {
   margin: 0;
   font-size: clamp(1.1rem, 1.1vw + 0.95rem, 1.6rem);
